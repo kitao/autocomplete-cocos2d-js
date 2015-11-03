@@ -1,6 +1,6 @@
 {
   "name": "autocomplete-cocos2d-js",
-  "main": "./lib/autocomplete-cocos2d-js",
+  "main": "./lib/main",
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [

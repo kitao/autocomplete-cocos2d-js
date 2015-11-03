@@ -1,6 +1,5 @@
 module.exports =
-  provider =
-    selector: '.source.js, .source.coffee'
+  selector: '.source.js, .source.coffee'
 
   getSuggestions: (request) ->
     test =
