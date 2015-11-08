@@ -18,31 +18,30 @@ def parse_url
   doc.xpath(URL_XPATH).map { |url| File.join(BASE_URL, url) }
 end
 
-def parse_name(doc, xpath, type)
+def parse_name(doc, xpath)
   doc.xpath(xpath).map do |node|
-    name = node.xpath(NAME_XPATH).to_s.strip.split('.').last
-    { text: name, type: type }
+    node.xpath(NAME_XPATH).to_s.strip.split('.').last
   end
 end
 
-def parse_page(url)
+def parse_page!(completions, url)
   puts "parse #{url}"
   doc = Nokogiri::HTML(open(url))
-  completions = []
-  completions += parse_name(doc, CLASS_XPATH, 'class')
-  completions += parse_name(doc, PROPERTY_XPATH, 'property')
-  completions += parse_name(doc, METHOD_XPATH, 'method')
+  completions[:class] += parse_name(doc, CLASS_XPATH)
+  completions[:property] += parse_name(doc, PROPERTY_XPATH)
+  completions[:method] += parse_name(doc, METHOD_XPATH)
   completions
 end
 
-def adjust_completions!(completions)
-  completions.reject! do |e|
-    text = e[:text]
-    !text || text.include?(' ') || e[:type] == 'property' && text == 'create'
+def finish_completions!(completions)
+  completions.each_value do |names|
+    names.uniq!
+    names.reject! { |name| !name || name.include?(' ') }
   end
-  completions.push(text: 'view', type: 'property')
-  completions.push(text: 'create', type: 'method')
-  completions.uniq!
+  completions[:property].push('view')
+  completions[:property].delete('create')
+  completions[:method].push('create')
+  completions.each_value(&:sort!)
 end
 
 def save_completions(completions)
@@ -51,10 +50,10 @@ def save_completions(completions)
 end
 
 def make_completions
-  completions = []
+  completions = { class: [], property: [], method: [] }
   urls = parse_url
-  urls.each { |url| completions += parse_page(url) }
-  adjust_completions!(completions)
+  urls.each { |url| parse_page!(completions, url) }
+  finish_completions!(completions)
   save_completions(completions)
 end
 
