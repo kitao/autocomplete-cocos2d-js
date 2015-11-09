@@ -1,5 +1,4 @@
-# autocomplete-cocos2d-js package
+# Cocos2d-JS Autocomplete Package
 
-A short description of your package.
-
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+Cocos2d-JS class, property and method completions in Atom.
+Install [autocomplete-plus](https://github.com/atom-community/autocomplete-plus) before installing this package.

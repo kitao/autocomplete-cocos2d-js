@@ -1,8 +1,8 @@
 {
   "name": "autocomplete-cocos2d-js",
   "main": "./lib/main",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "version": "0.1.0",
+  "description": "Autocomplete package for Cocos2d-JS",
   "keywords": [],
   "repository": "https://github.com/atom/autocomplete-cocos2d-js",
   "license": "MIT",
