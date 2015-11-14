@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Cocos2d-JS class, property and method autocompletions",
   "keywords": [],
-  "repository": "https://github.com/atom/autocomplete-cocos2d-js",
+  "repository": "https://github.com/kitao/autocomplete-cocos2d-js",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
