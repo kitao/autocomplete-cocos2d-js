@@ -41,6 +41,7 @@ def finish_completions!(completions)
   completions[:property].push('view')
   completions[:property].delete('create')
   completions[:method].push('create')
+  completions[:method].push('_super')
   completions.each_value(&:sort!)
 end
 
