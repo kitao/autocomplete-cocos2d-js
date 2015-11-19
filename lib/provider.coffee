@@ -12,8 +12,9 @@ module.exports =
       path.resolve(__dirname, '..', 'completions.json'),
       (err, data) => @completions = JSON.parse(data) unless err?)
 
-  getSuggestions: ({prefix}) ->
-    return [] if prefix.length < 3
+  getSuggestions: ({editor, prefix}) ->
+    if prefix.length < 3 or not editor.getText().match(/\bcc\b/)
+      return []
 
     completions = []
     for type, names of @completions
