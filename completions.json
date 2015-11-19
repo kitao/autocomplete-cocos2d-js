@@ -1270,6 +1270,7 @@
     "IMEKeyboardNotificationInfo",
     "MarginZero",
     "NextPOT",
+    "_super",
     "action",
     "actionEase",
     "actionInterval",
