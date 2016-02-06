@@ -1,7 +1,7 @@
 {
   "name": "autocomplete-cocos2d-js",
   "main": "./lib/main",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Cocos2d-JS class, property and method autocompletions",
   "keywords": [],
   "repository": "https://github.com/kitao/autocomplete-cocos2d-js",
