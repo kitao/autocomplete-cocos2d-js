@@ -2,7 +2,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'json'
 
-BASE_URL = 'http://cocos2d-x.org/docs/api-ref/js/v3x/'
+BASE_URL = 'http://www.cocos2d-x.org/docs/api-ref/js/v3x/'
 FILENAME = File.join(File.dirname(__FILE__), './completions.json')
 
 URL_XPATH = '//li/a/@href'
@@ -38,10 +38,6 @@ def finish_completions!(completions)
     names.uniq!
     names.reject! { |name| !name || name.include?(' ') }
   end
-  completions[:property].push('view')
-  completions[:property].delete('create')
-  completions[:method].push('create')
-  completions[:method].push('_super')
   completions.each_value(&:sort!)
 end
 
