@@ -1,3 +1,7 @@
+## 0.7.0
+- Changed to use the keywords extracted from the API reference only
+- Changed the url of the API reference
+
 ## 0.6.0
 - Fixed to use the same version number in the CHANGELOG.md and the tags
 
