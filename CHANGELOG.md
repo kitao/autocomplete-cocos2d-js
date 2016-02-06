@@ -1,4 +1,7 @@
-## 0.2.1
+## 0.4.0
+- Fixed the version number in the CHANGELOG.md
+
+## 0.3.0
 - Updated the version of the API reference to 3.x
 
 ## 0.2.0
