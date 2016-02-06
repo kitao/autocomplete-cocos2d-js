@@ -10,4 +10,4 @@ autocomplete-cocos2d-js is enabled when the keyword 'cc' is used in JavaScript.
 
 ## Supported Version of Cocos2d-JS
 
-The completion list are made from [Cocos2d-JS 3.8 API Reference](http://www.cocos2d-x.org/reference/html5-js/V3.8/index.html).
+The completion list are made from [v3.x JavaScript API Reference](http://cocos2d-x.org/docs/api-ref/js/v3x/).

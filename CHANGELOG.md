@@ -1,3 +1,6 @@
+## 0.2.1
+- Updated the version of the API reference to 3.x
+
 ## 0.2.0
 - Added the _super method to the completions
 - Changed to only run when the keyword 'cc' is used

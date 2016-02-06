@@ -2,7 +2,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'json'
 
-BASE_URL = 'http://www.cocos2d-x.org/reference/html5-js/V3.8/'
+BASE_URL = 'http://cocos2d-x.org/docs/api-ref/js/v3x/'
 FILENAME = File.join(File.dirname(__FILE__), './completions.json')
 
 URL_XPATH = '//li/a/@href'
